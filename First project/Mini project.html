@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>first javascript project</title>
+    <style>
+        body {
+            background-color: rgb(71, 70, 70);
+            color: blanchedalmond;
+        }
+    </style>
 </head>
 <body>
 
-
-
+    <div id="container">
+        <h1 id="header">Hello World</h1>
+        <p id="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ipsum alias blanditiis quis, doloribus aliquam delectus ratione 
+            nesciunt, quasi ex ullam non quia itaque accusantium rem dolorem 
+            quod dolorum ipsam deleniti?
+        </p>
+    </div>
 
 
     <script>
-        
+        var container = document.getElementById('container')
+        var header = document.getElementById('header')
+        var body = document.getElementById('body')
+        var name = "Nano"
+        var age = 23
+
+        var me = 'Hello, my name is ' + name + ' and I am ' + age + ' years old, \n I am on my way to becoming a world class frontend developer'
+
+        header.innerHTML = 'Hello Lorem'
     </script>
     
 </body>
