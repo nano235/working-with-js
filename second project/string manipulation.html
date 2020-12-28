@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String manipulation</title>
+</head>
+<body>
+
+    <div>
+        <span id="sentence">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic odio alias 
+            voluptatum obcaecati cumque tenetur impedit odit facilis, debitis, iusto, 
+            dignissimos numquam. Autem quae enim deserunt officia ea doloribus? Ipsum 
+            numquam dicta beatae, esse adipisci reprehenderit perferendis dolore earum 
+            tempore reiciendis labore corporis cupiditate delectus eaque. Blanditiis 
+            inventore excepturi eveniet.
+        </span>
+    </div>
+    
+
+
+    <script>
+
+        var sentence = document.getElementById ('sentence')
+        var sentence = sentence.innerText
+        var upperSentence = sentence.toUpperCase();
+            console.log ('upper case sentence: ', upperSentence)
+        
+        var lowerSentence = sentence.toLowerCase()
+            console.log ('lower case sentence: ', lowerSentence)
+
+        var firstTenLetters = sentence.substr(0, 10)
+            console.log ('the first ten letters are: ', firstTenLetters)
+
+        var eachWord = sentence.split(" ")
+            console.log (eachWord)
+        
+        var joinedWords = '(' + eachWord.join(') (') + ')'
+            console.log (joinedWords)
+
+        var slicedSentence = eachWord.slice(0, 10)
+            console.log (slicedSentence)
+
+
+    </script>
+</body>
+</html>
