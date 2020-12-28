@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Project</title>
+</head>
+<body>
+    <div>
+        <h3 id="text"></h3>
+        <span id="url"></span>
+    </div>
+    
+
+    <script>
+        var url = document.getElementById('url')
+        var text = document.getElementById('text')
+        var ask = prompt ('type a url')
+
+
+        if (ask.length !== 0) {
+            if (ask.substr(0, 4) !== 'http'){
+                alert ('you did not start with "http", but I will fix it for you')
+                var re_ask = prompt ('type a url starting with "www" this time')
+                var ask = "http://" + re_ask
+                url.innerHTML = "<a href='"+ ask +"'>" + ask +'</a>'
+                text.innerHTML = 'The link is'
+                    console.log(url.innerHTML)
+            }
+            else {
+                url.innerHTML = "<a href='"+ ask +"'>" + ask +'</a>'
+                text.innerHTML = 'The link is'
+            }
+        }
+
+        else {
+            text.innerHTML = "You did not type a url, please refresh the page";
+                console.log (display)
+        }
+        
+
+
+    </script>
+</body>
+</html>
