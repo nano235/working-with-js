@@ -17,25 +17,29 @@
         var text = document.getElementById('text')
         var ask = prompt ('type a url')
 
-
-        if (ask.length !== 0) {
-            if (ask.substr(0, 4) !== 'http'){
-                alert ('you did not start with "http", but I will fix it for you')
-                var re_ask = prompt ('type a url starting with "www" this time')
-                var ask = "http://" + re_ask
-                url.innerHTML = "<a href='"+ ask +"'>" + ask +'</a>'
-                text.innerHTML = 'The link is'
-                    console.log(url.innerHTML)
+        if (ask !== null){
+            if (ask.length !== 0) {
+                if (ask.substr(0, 4) !== 'http'){
+                    alert ('you did not start with "http", but I will fix it for you')
+                    var re_ask = prompt ('type a url starting with "www" this time')
+                    var ask = "http://" + re_ask
+                    url.innerHTML = "<a href='"+ ask +"'>" + ask +'</a>'
+                    text.innerHTML = 'The link is'
+                        console.log(url.innerHTML)
+                }
+                else {
+                    url.innerHTML = "<a href='"+ ask +"'>" + ask +'</a>'
+                    text.innerHTML = 'The link is'
+                }
             }
+    
             else {
-                url.innerHTML = "<a href='"+ ask +"'>" + ask +'</a>'
-                text.innerHTML = 'The link is'
+                text.innerHTML = "You did not type a url, please refresh the page";
+                    console.log (display)
             }
-        }
-
-        else {
-            text.innerHTML = "You did not type a url, please refresh the page";
-                console.log (display)
+        }else {
+            alert ('you clicked on cancel')
+            text.innerHTML = 'Please refresh this page to continue'
         }
         
 

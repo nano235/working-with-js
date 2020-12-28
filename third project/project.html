@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rd project</title>
+</head>
+<body>
+    <span id="test"></span>
+
+
+    <script>
+        var test = document.getElementById('test')
+        var ask = prompt('how old are you?')
+
+        if (ask !== null){
+            num_ask = Number(ask)
+                if(num_ask >= 21) {
+                    test.innerHTML = 'You are both eligible to vote and drink alcohol'
+                }
+                else if (num_ask >= 18) {
+                    test.innerHTML = 'You are eligible to vote'
+                }else {
+                    test.innerHTML = 'Sorry younglin, better luck next year'
+                }
+        }else {
+            alert('you cancelled, please refresh page')
+            test.innerHTML = 'please refresh page'
+        }
+    </script>
+</body>
+</html>
