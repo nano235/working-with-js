@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+
+    <h3 id="money"></h3>
+
+
+    <script>
+        var price = prompt ('hello, what is your bill?')
+        bill = Number(price)
+
+        function tip (amount){
+            return (0.2 * bill) + bill
+        }
+        var totalAmount = tip(bill)
+
+        function $(id){
+            var get = document.getElementById(id)
+            return get
+        }
+        var getId = $("money")
+
+
+        if (price !== null){
+            if (price.length !== 0){
+                getId.innerHTML = 'Your total amount is $' + totalAmount
+            }else {
+                getId.innerHTML = 'please input a number'
+            }          
+        }else {
+            getId.innerHTML = 'You did not input anything, please refresh the page'
+        }
+        
+    </script>
+    
+</body>
+</html>
