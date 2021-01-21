@@ -9,3 +9,9 @@ while (j < arrayOfCars.length){
     console.log(arrayOfCars[j])
     j++
 }
+
+j = 4
+do{
+    console.log(arrayOfCars[j])
+    j++
+}while (j<3)
