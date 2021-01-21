@@ -1,3 +1,7 @@
+//loops
+
+"use strict"
+
 let g
 for (g = 0; g<arrayOfCars.length; g++){
     console.log(arrayOfCars[g])
@@ -10,8 +14,8 @@ while (j < arrayOfCars.length){
     j++
 }
 
-j = 4
+g = 4
 do{
-    console.log(arrayOfCars[j])
-    j++
-}while (j<3)
+    console.log(arrayOfCars[g])
+    g++
+}while (g<3)
