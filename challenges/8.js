@@ -9,5 +9,7 @@ const myObject1 = {
 }
 
 for (let i in myObject1){
-    console.log(i, myObject1[i])
+    if(i === "key1" || i === "key3"){
+        console.log(myObject1[i])
+    }
 }
