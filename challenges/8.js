@@ -13,3 +13,26 @@ for (let i in myObject1){
         console.log(myObject1[i])
     }
 }
+
+
+//challenges
+
+const myNumbers = [
+    2355,
+    7235,
+    8135,
+    1762,
+    2361,
+    8351
+]
+
+let newRandomNumber = Math.floor(Math.random() * 10000) + 1000;
+
+for (let i in myNumbers){
+    if(newRandomNumber === myNumbers[i]){
+        let newRandomNumber = Math.floor(Math.random() * 10000) + 1000;
+    }
+}
+myNumbers.push(newRandomNumber)
+console.log(myNumbers)
+
