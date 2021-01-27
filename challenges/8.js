@@ -26,14 +26,14 @@ const myNumbers = [
     8351
 ]
 
-let newRandomNumber = Math.floor(Math.random() * 10000) + 1000
-console.log(newRandomNumber)
+let newRandomNumber = Math.floor(Math.random() * 10000) + 1000 //creates a random number
+console.log(newRandomNumber)//checks to see what the random number is
 
-for (let i in myNumbers){
-    if(newRandomNumber === myNumbers[i]){
-        newRandomNumber = Math.floor(Math.random() * 10000) + 1000
+for (let i in myNumbers){//iterates over the array
+    if(newRandomNumber === myNumbers[i]){//compares the random number with each value of the array
+        newRandomNumber = Math.floor(Math.random() * 10000) + 1000//if the random number is equal to any value in the arrya, it creates another
     }
 }
-myNumbers.push(newRandomNumber)
+myNumbers.push(newRandomNumber)//adds the random number to the array if it meets the condition in the for loop
 console.log(myNumbers)
 
