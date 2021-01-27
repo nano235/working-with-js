@@ -26,11 +26,12 @@ const myNumbers = [
     8351
 ]
 
-let newRandomNumber = Math.floor(Math.random() * 10000) + 1000;
+let newRandomNumber = Math.floor(Math.random() * 10000) + 1000
+console.log(newRandomNumber)
 
 for (let i in myNumbers){
     if(newRandomNumber === myNumbers[i]){
-        let newRandomNumber = Math.floor(Math.random() * 10000) + 1000;
+        newRandomNumber = Math.floor(Math.random() * 10000) + 1000
     }
 }
 myNumbers.push(newRandomNumber)
