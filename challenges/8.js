@@ -51,8 +51,7 @@ function getRandomNumber (max, min){
 
 function theLoop (randomNumber){
     for (let i of myNumbers){
-        if (randomNumber === myNumbers){
-            console.log("Hello")
+        if (randomNumber === myNumbers){ 
             return
         }
     }
