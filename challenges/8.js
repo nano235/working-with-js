@@ -48,6 +48,7 @@ function getRandomNumber (max, min){
     return randomNumber
 }
 
+//the loop function
 
 function theLoop (randomNumber){
     for (let i of myNumbers){
