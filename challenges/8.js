@@ -68,7 +68,7 @@ myNumbers.push(randomNumber)
 console.log(myNumbers)
 
 
-//Refracturing my own solution using the same array
+//Refractoring my own solution using the same array
 
 //The max and min numbers you want it to generate
 let MAX_NUMBER = 9999
