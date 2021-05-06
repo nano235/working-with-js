@@ -85,7 +85,7 @@ function generateRandnum (min, max) {
 }
 
 function loop (randNumber) {
-    for (let i in randNumber) {
+    for (let i of randNumber) {
         if (randNumber === myNumbers) {
             return randNumber
         }
