@@ -100,9 +100,25 @@ console.log(myNumbers)
 //I honestly didn't see the need for the "do while" loop used by my instructor, so I skipped it
 
 
+//Challenges
+// create an object with name, age and city, then add country to the Object.protype.country
+// iterate over the object, console.log all the values excluding the Object.protype.country
+
+//solution
+const myObjects = {
+    Name: "Mike",
+    age: 30,
+    city: "London"
+}
+
+Object.prototype.country = "England"
 
 
-
+for (let key in myObjects) {
+    if (myObjects.hasOwnProperty(key)) {
+       console.log(myObjects[key]);
+    }
+}
 
 
 
