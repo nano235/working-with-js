@@ -37,7 +37,7 @@ for (let i in myNumbers){//iterates over the array
 myNumbers.push(newRandomNumber)//adds the random number to the array if it meets the condition in the for loop
 console.log(myNumbers)
 
-//another way of doing same comparism
+//Tutors solution to the challent
 
 let MAX = 9999
 let MIN = 1000
@@ -66,4 +66,43 @@ do{
 
 myNumbers.push(randomNumber)
 console.log(myNumbers)
+
+
+//Refracturing my own solution using the same array
+
+//The max and min numbers you want it to generate
+let MAX_NUMBER = 9999
+let MIN_NUMBER = 1000
+let randNumber
+
+function generateRandnum (min, max) {
+    randNumber = Math.floor(Math.random() * (max - min) + min)
+    console.log(randNumber)
+    return randNumber
+    //this generates a number between 0 - 0.99999999999999999... and then multiplies it by the
+    //(max - min) which multiplies it by a value equal to the max value subtracted by the min value
+    // and then add the min value to show a number between the max and min. The floor then removes the decimals
+}
+
+function loop (randNumber) {
+    for (let i in randNumber) {
+        if (randNumber === myNumbers) {
+            return randNumber
+        }
+    }
+}
+
+randNumber = generateRandnum(MIN_NUMBER, MAX_NUMBER)
+
+myNumbers.push(randNumber)
+console.log(myNumbers)
+
+//I honestly didn't see the need for the "do while" loop used by my instructor, so I skipped it
+
+
+
+
+
+
+
 
