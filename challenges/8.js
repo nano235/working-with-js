@@ -120,5 +120,16 @@ for (let key in myObjects) {
     }
 }
 
+//ANOTHER CHALLENGE
+
+//Write an if...else statement using tenary operators
+
+//Solution
+function emptyArray(inputArray) {
+    return (inputArray.length > 0? "Array is not empty" : "Array is empty");
+}
+
+console.log(emptyArray([1, 3]));
+console.log(emptyArray([]));
 
 
