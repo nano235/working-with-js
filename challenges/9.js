@@ -30,3 +30,35 @@ checkType(x)
 
 //I looped over an object and checked the typeof of each value, then I went on to check the instanceof to 
 //differentiate an array from an object
+
+
+
+
+// Practicing with call, apply and bind methods, also using this
+
+const h = {
+    home: "Asaba",
+    name: "Nano",
+    age: 17,
+    netWorth: "uncountable",
+    x: function () {
+        console.log(`Hello, my name is ${this.name}, I'm ${this.age} years old, I stay in ${this.home}, and my networth is ${this.netWorth}`)
+    }
+}
+
+
+const p = {
+    home: "Lagos",
+    name: "Nano",
+    age: 19,
+    netWorth: "uncountable",
+}
+
+
+h.x.call(p);
+h.x.apply(p);
+let w = h.x.bind(p)
+w()
+
+
+
