@@ -76,7 +76,7 @@ customMethod()
 
 
 
-//Immediately Invoked Function Expression
+//Immediately Invoked Function Expression IIFE
 //Using same code from above
 
 (function (globalWindow) {
@@ -86,6 +86,20 @@ customMethod()
     }
     return
 })(this);
+
+this.customMethod();
+
+customMethod()
+
+//Another way of using IIFE
+
+(function () {
+    this.customMethod = function () {
+        console.log("Greeting from the customMethod");
+        return
+    }
+    return
+})();
 
 this.customMethod();
 
