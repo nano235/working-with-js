@@ -60,5 +60,18 @@ h.x.apply(p);
 let w = h.x.bind(p)
 w()
 
+//Create a function that will add custom method to the global object "window"
+function addCustomGlobalMethod(globalWindow) {
+    globalWindow.customMethod = function () {
+        console.log("Greeting from the customMethod");
+    }
+}
+
+
+addCustomGlobalMethod(this);
+
+this.customMethod();
+
+customMethod()
 
 
