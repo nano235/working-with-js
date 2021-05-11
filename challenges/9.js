@@ -75,3 +75,19 @@ this.customMethod();
 customMethod()
 
 
+
+//Immediately Invoked Function Expression
+//Using same code from above
+
+(function (globalWindow) {
+    globalWindow.customMethod = function () {
+        console.log("Greeting from the customMethod");
+        return
+    }
+    return
+})(this);
+
+this.customMethod();
+
+customMethod()
+
