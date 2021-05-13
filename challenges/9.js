@@ -105,3 +105,34 @@ this.customMethod();
 
 customMethod()
 
+
+//Another Challenge
+
+//Create a function "waitingFn" with single parameter "timeInMs" and inside of the function create a "while"
+// loop and this loop should be running during "timeInMs"
+
+
+
+function waitingFn(timeInMs) {
+    let start = Date.now() + timeInMs
+    while (start > Date.now()) {
+        //Do nothing
+    }
+}
+
+
+waitingFn(3000)
+
+console.log('The function call has ended')
+
+
+
+
+
+
+
+
+
+
+
+
