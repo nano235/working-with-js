@@ -1,6 +1,7 @@
 //Use typeof/instanceof operator to check types
+"use strict"
 
-let x = {
+let q = {
    1: [],
    2: {},
    3: "",
@@ -26,7 +27,7 @@ function checkType(value) {
  }
 
 
-checkType(x)
+checkType(q)
 
 //I looped over an object and checked the typeof of each value, then I went on to check the instanceof to 
 //differentiate an array from an object
@@ -79,31 +80,31 @@ customMethod()
 //Immediately Invoked Function Expression IIFE
 //Using same code from above
 
-(function (globalWindow) {
-    globalWindow.customMethod = function () {
-        console.log("Greeting from the customMethod");
-        return
-    }
-    return
-})(this);
+// (function (globalWindow) {
+//     globalWindow.customMethod = function () {
+//         console.log("Greeting from the customMethod");
+//     }
+// })(this);
 
-this.customMethod();
+// this.customMethod();
 
-customMethod()
+// customMethod()
+
+//The IIFE gives an error in "use strict", hence it is commented out
 
 //Another way of using IIFE
 
-(function () {
-    this.customMethod = function () {
-        console.log("Greeting from the customMethod");
-        return
-    }
-    return
-})();
+// (function () {
+//     this.customMethod = function () {
+//         console.log("Greeting from the customMethod");
+//         return
+//     }
+//     return
+// })();
 
-this.customMethod();
+// this.customMethod();
 
-customMethod()
+// customMethod()
 
 
 //Another Challenge
