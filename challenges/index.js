@@ -34,3 +34,21 @@ for (let i = 0; i < linkLength; i++) {
     
 }
 
+
+
+var getBtn = document.getElementById("btn")
+var count = 0
+
+// arrow functin
+getBtn.addEventListener("click", () => { 
+    getBtn.innerHTML = `Button clicked ${++count} times`
+    console.log("I have been clicked")
+});
+
+// normal function
+// getBtn.addEventListener("click", function () { 
+//     getBtn.innerHTML = `Button clicked ${++count} times`
+//     console.log("I have been clicked")
+// });
+
+
