@@ -84,6 +84,23 @@ myCities.forEach ((element, index) =>
 )
 
 
+// CHALLENGE
+
+const postsJSON = [
+    '{"postId":1355,"commentsQuantity":5}',
+    '{"postId":5131,"commentsQuantity":13}',
+    '{"postId":6134,"commentsQuantity":2}'
+  ];
+  
+  /* From the "postsJSON" array create "posts" array that will consist of JavaScript objects */
+
+//   SOLUTION
+
+const posts = postsJSON.map(post => JSON.parse(post)) //my solution
+
+// const posts = postsJSON.map(JSON.parse) //instructor's solution
+  console.log(posts);
+
 
 
 
