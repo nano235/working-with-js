@@ -164,5 +164,31 @@ console.log(arrayCheck(d)); // Array is not sorted
 
 
 
+// CHALLENGE
+
+const A = [1, 2, 3];
+const B = [1, 2, 3];
+
+console.log(A === B); // false
+
+/* Create a function "arraysAreEqual" with two parameters "arrayOne" and "arrayTwo". 
+If two arrays are equal (have same quantity of the elements and all elements match e.g. arrayOne[0] === arrayTwo[0] etc.) return "true".
+Otherwise return "false". */
+
+// Solution
+
+const arraysAreEqual = (arrayOne, arrayTwo) => { 
+    if(arrayOne.length != arrayTwo.length) return false;
+
+    return arrayOne.every((element, index) => element === arrayTwo[index]);
+}
+const C = [2, 1, 3];
+const D = [1, 2, 3, 4];
+
+console.log(arraysAreEqual(A, B)); // true
+console.log(arraysAreEqual(A, C)); // false
+console.log(arraysAreEqual(A, D)); // false
+
+
 
 
