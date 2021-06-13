@@ -294,6 +294,47 @@ pushIfUnique(myNumbers, 77);
 console.log(myNumbers); // [123, 50, 27, 80, 77]
 
 
+// CHALLENGE
+
+const statusUpdate = [
+	{
+	  title: "How to find JavaScript developer job?",
+	  postId: 3421,
+	  comments: 25
+	},
+	{
+	  title: "Is it hard to learn ES6?",
+	  postId: 5216,
+	  comments: 3
+	},
+	{
+	  title: "Should I learn React or Angular?",
+	  postId: 8135,
+	  comments: 12
+	}
+  ];
+  
+  const minimalComentsQty = 10;
+  
+  /* Create a function "popularPostsIds" with two parameters "posts" and "minimalComentsQty".
+  This function "popularPostsIds" should return an array of postIds of posts that have quantity 
+  of "comments" at least equal to "minimalComentsQty"
+  */
+
+//   Solution
+
+const popularPostsIds = (posts, minimalComentsQty) => {
+	return posts.reduce((popularPosts, post) => {
+		if (post.comments >= minimalComentsQty) {
+			popularPosts.push(post.postId);
+		}	
+		return popularPosts;
+	}, [])
+}
+  
+  console.log(popularPostsIds(statusUpdate, minimalComentsQty)); // [3421, 8135]
+
+
 
 
 
