@@ -575,10 +575,9 @@ NOTE: If you are stuck - hints down below!
 // FIRST test case
 const ab = 10;
 const ba = 5;
-// const sum = taggedTemplate`Sum of the two variables a(${ab}) and b(${ba}) is ${ab +
-//   ba}`;
+const sum = taggedTemplate`Sum of the two variables a(${ab}) and b(${ba}) is ${ab + ba}`;
 
-// console.log(sum);
+console.log(sum);
 /* Sum of the two variables ab(10) and ba(5) is 15 */
 
 // SECOND test case
@@ -616,6 +615,47 @@ In the first test case this array needs to be [10, 5, 15]
 6. In the callback function for "reduce" helper method you need to concatenate pairs (string, expression value). 
 First pair in the first test case will be ("Sum of the two variables a(", "10").
 */
+
+
+// CHALLENGE
+
+/*
+Create a function "meanScore" that will accept any quantity of the arguments, gather them into single 
+array and return mean value of all arguments rounded to 2 decimal places.
+If at least one element in the gathered array is not a number - throw following error to the console: 
+"Supplied arguments must contain only numbers!"
+Type of the returned value must be a "number".
+HINT: In this Challenge you should use both rest and spread operators.
+*/
+
+const scores1 = [0, 1.5, 2.5, 3.7];
+const scores2 = [1.7, 4.5, 0, 4.9, 5.0, 4.2];
+const scores3 = [1.3, 2.5, 1.9];
+const scores4 = ["abc", 1.3, true, 2.5, 1.9];
+
+
+// Solution
+
+const meanScore = (...scores) => {
+  let total = scores.reduce((element, n) => {
+    return element + n
+  }, 0)
+
+  if (typeof total === "number") return +(total/scores.length).toFixed(2)
+  return `Type of the returned value must be a "number"`
+}
+
+console.log(meanScore(...scores1)); // 1.93
+
+console.log(
+  meanScore(...scores1, ...scores2)
+); // 2.8
+
+console.log(
+  meanScore(...scores1, ...scores2, ...scores3)
+); // 2.59
+
+console.log(meanScore(...scores4)); // Supplied arguments must contain only numbers!
 
 
 
