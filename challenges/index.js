@@ -636,13 +636,29 @@ const scores4 = ["abc", 1.3, true, 2.5, 1.9];
 
 // Solution
 
-const meanScore = (...scores) => {
-  let total = scores.reduce((element, n) => {
-    return element + n
-  }, 0)
 
-  if (typeof total === "number") return +(total/scores.length).toFixed(2)
-  return `Type of the returned value must be a "number"`
+// Method 1
+
+// const meanScore = (...scores) => {
+//   let total = scores.reduce((element, n) => {
+//     return element + n
+//   }, 0)
+
+//   if (typeof total === "number") return +(total/scores.length).toFixed(2)
+//   return `Type of the returned value must be a "number"`
+// }
+
+
+
+// Method 2
+
+
+const meanScore = (...scores) => {
+  if (scores.every(elem => typeof elem === "number")) {
+    return +scores.reduce((element, n) => {
+          return element + n/scores.length
+        }, 0).toFixed(2)
+  }else return `All types of the returned value must be a "number"`
 }
 
 console.log(meanScore(...scores1)); // 1.93
