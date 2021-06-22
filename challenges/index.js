@@ -741,15 +741,21 @@ const tasks = [
 
 // Solution
 
-// const generateTasksIds = (tasks) => {
-//   // const taskIds = tasks.map(id => id)
-//   console.log(`Here we go again`);
-//   return tasks
-// }
 
-// const tasksSortedByIds = (task, tasksWithIds = generateTasksIds()) => {
-//   return task
-// }
+
+const tasksSortedByIds = (tasks) => {
+  console.log(`Quantity of the missing taskIds is ${tasks.filter(task => !task.hasOwnProperty("taskId")).length}`);
+  const newTasks = tasks.map(({...task}) => {
+    if (!task.hasOwnProperty('taskId')){
+      let newTaskId = 1000 + Math.floor(Math.random() * 9000)
+      task.taskId = newTaskId
+    }
+    return task
+  })
+  return newTasks.sort((a, b) => a.taskId - b.taskId)
+}
+
+
 
 console.log(
   "Sorted array of tasks with taskIds:",
@@ -760,10 +766,10 @@ Quantity of the missing taskIds is 2
 Sorted array of tasks with taskIds: ...
 */
 
-// console.log(
-//   "Original unsorted array of tasks with missing taskIds:",
-//   tasks
-// );
+console.log(
+  "Original unsorted array of tasks with missing taskIds:",
+  tasks
+);
 /*
 Original unsorted array of tasks with missing taskIds: ...
 */
