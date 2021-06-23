@@ -760,6 +760,41 @@ const tasksSortedByIds = (tasks) => {
 }
 
 
+// Tutor's solution
+
+// const generateTasksIds = tasks => {
+//   let newTaskIds = [];
+//   return tasks.map(({ ...task }) => {
+//     if (!task.hasOwnProperty("taskId")) {
+//       let newTaskId;
+//       do {
+//         newTaskId = 1000 + Math.floor(Math.random() * 9000);
+//       } while (
+//         tasks.find(task => task.taskId === newTaskId) ||
+//         newTaskIds.includes(newTaskId)
+//       );
+//       newTaskIds.push(newTaskId);
+
+//       task.taskId = newTaskId;
+//     }
+//     return task;
+//   });
+// };
+
+// const tasksSortedByIds = (
+//   tasks,
+//   tasksWithIds = generateTasksIds(tasks)
+// ) => {
+//   console.log(
+//     `Quantity of the missing taskIds is ${
+//       tasks.filter(task => !task.hasOwnProperty("taskId"))
+//         .length
+//     }`
+//   );
+//   return tasksWithIds.sort((a, b) => a.taskId - b.taskId);
+// };
+
+
 
 console.log(
   "Sorted array of tasks with taskIds:",
