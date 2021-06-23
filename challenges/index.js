@@ -745,14 +745,18 @@ const tasks = [
 
 const tasksSortedByIds = (tasks) => {
   console.log(`Quantity of the missing taskIds is ${tasks.filter(task => !task.hasOwnProperty("taskId")).length}`);
-  const newTasks = tasks.map(({...task}) => {
+  let newTasks = []
+  return tasks.map(({...task}) => {
     if (!task.hasOwnProperty('taskId')){
-      let newTaskId = 1000 + Math.floor(Math.random() * 9000)
+      let newTaskId
+      do {
+        newTaskId = 1000 + Math.floor(Math.random() * 9000)
+      } while (tasks.find(elem => elem === newTaskId) || newTasks.includes(newTaskId));
+      newTasks.push(task)
       task.taskId = newTaskId
     }
     return task
-  })
-  return newTasks.sort((a, b) => a.taskId - b.taskId)
+  }).sort((a, b) => a.taskId - b.taskId)
 }
 
 
