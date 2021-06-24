@@ -915,10 +915,9 @@ let min, max;
 
 const minMax = (...params) => {
   params.sort((a,b) => a-b)
-  min = params[0]
-  max = params[params.length-1]
-  return (min, max);
+  return [params[0], params[params.length-1]]
 }
+
 
 
 // Tutor's solution
@@ -929,17 +928,17 @@ const minMax = (...params) => {
 // ];
 
 
-/* call here "minMax" function with arguments 24, 5, 34, 10 */
-minMax(24, 5, 34, 10)
+// /* call here "minMax" function with arguments 24, 5, 34, 10 */
 
-// [min, max] = minMax(24, 5, 34, 10); //tutor's call
+[min, max] = minMax(24, 5, 34, 10);
 console.log(min, max); // 5, 34
 
-/* call here "minMax" function with arguments 18, 23, 103, 70, 80, 25 */
-minMax(18, 23, 103, 70, 80, 25)
+// /* call here "minMax" function with arguments 18, 23, 103, 70, 80, 25 */
 
-// [min, max] = minMax(18, 23, 103, 70, 80, 25); //Tutor's call
+[min, max] = minMax(18, 23, 103, 70, 80, 25);
 console.log(min, max); // 18, 103
+
+
 
 
 
