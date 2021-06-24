@@ -870,7 +870,7 @@ const photo1 = photoGallery(
 photo1.info();
 /* Dimenstions of the foto "My dog" are 1920x1080 */
 
-setTimeout(() => photo1.publishInfo(), 2000);
+// setTimeout(() => photo1.publishInfo(), 2000);
 /* Foto "My dog" was published 2 seconds ago */
 
 /* QUESTION: Why "publishInfo" method still has access to the parameters 
@@ -878,6 +878,24 @@ setTimeout(() => photo1.publishInfo(), 2000);
 
 console.log(photo1[testDimension1]); // true
 console.log(photo1[testDimension2]); // undefined
+
+
+// CHALLENGE
+
+/*
+Modify parameters section in the "processQuantities" function to match console.log outputs
+*/
+
+const processQuantities = ([minQty, maxQty, defaultQty = 0]) => {
+  console.log(minQty); // 8
+  console.log(maxQty); // 29
+  console.log(defaultQty); // 0
+  return maxQty - minQty; // returns 21
+};
+
+const qtyRange = [8, 29];
+
+processQuantities(qtyRange);
 
 
 
