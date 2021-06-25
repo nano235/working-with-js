@@ -940,6 +940,62 @@ console.log(min, max); // 18, 103
 
 
 
+// CHALLENGE
+
+/*
+Modify "personInfo" function to match console.log output at the end of the challenge.
+Object that is returned by "personInfo" function must contain only shorthand property names.
+*/
+
+const personInfo = ({name, age : personAge, location:{country : origin, city: homeCity}, 
+  friendsQty= 0, recordCreatedAt = new Date().getFullYear()}) => {
+  return {name, personAge, origin, homeCity, friendsQty, recordCreatedAt}
+};
+
+const person = {
+  name: "Alice",
+  age: 19,
+  location: {
+    country: "England",
+    city: "London"
+  }
+};
+
+console.log(personInfo(person));
+/*
+{
+  name: "Alice",
+  personAge: 19,
+  origin: "England",
+  homeCity: "London",
+  friendsQty: 0,
+  recordCreatedAt: *current year*
+}
+*/
+
+
+/* CHALLENGE 9 - Object Destructuring
+Declare mult() function that will multiply values
+of the x, y, z fields of the passed object.
+*/
+
+var obj = {
+  x: 5,
+  y: 20,
+  z: 3
+};
+
+
+const {y, x, z} = obj
+
+// Write mult() function here
+
+const mult = ({...params}) => {
+  return x*y*z
+}
+
+console.log(mult(obj));
+
 
 
 
