@@ -1085,5 +1085,19 @@ console.log(PERSON);
 */
 
 
+function Animal(props){
+  this.name = props.name
+  console.log(name);
+  
+}
+
+const propsForAnimalName = {
+  name: "Goat"
+}
+
+const animalName = new Animal(propsForAnimalName)
+
+
+
 
 
