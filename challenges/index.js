@@ -1116,6 +1116,12 @@ child.modify("child")
 
 child.typeInfo()
 
+const grandChild = Object.create(Parent)
+
+grandChild.modify("grandChild")
+
+grandChild.typeInfo()
+
 
 
 
