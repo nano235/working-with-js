@@ -1098,6 +1098,25 @@ const propsForAnimalName = {
 const animalName = new Animal(propsForAnimalName)
 
 
+const Parent = {
+  type: "parent",
+  typeInfo(){
+    console.log(`Hello from ${this.type}`);
+  },
+  modify(prop){
+    this.type = prop
+  }
+}
+
+Parent.typeInfo()
+
+const child = Object.create(Parent)
+
+child.modify("child")
+
+child.typeInfo()
+
+
 
 
 
