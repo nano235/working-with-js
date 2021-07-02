@@ -1123,6 +1123,33 @@ grandChild.modify("grandChild")
 grandChild.typeInfo()
 
 
+// PROTOTYPE
+
+function Airplane (props) {
+  this.wingSpan = props.wingSpan
+  this.maxRangeOfFlight = props.maxRangeOfFlight
+}
+
+Airplane.prototype.airplaneInfo = function(){
+  console.log(`Wingspan of the airplane is ${this.wingSpan} and max range of flight is ${this.maxRangeOfFlight}`);
+}
+
+function CivilPlane (props) {
+  Airplane.call(this, props)
+  this.numberOfSeats = props.numberOfSeats
+}
+
+CivilPlane.prototype = Object.create(Airplane.prototype)
+
+const propsForSmallPlane = {
+  wingSpan: 30,
+  maxRangeOfFlight: 1000,
+  numberOfSeats: 50
+}
+
+const smallPlane = new CivilPlane(propsForSmallPlane)
+
+
 
 
 
