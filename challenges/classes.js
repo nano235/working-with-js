@@ -196,6 +196,38 @@ const propsForMyTv_1 = {
   myTV_1.priceInfo(); // Price of the product is 1200
 
 
+  /**
+ * CHALLENGE 7-4: TASK
+ *
+ * Create new class "ExtendedArray" that should extend built-in "Array".
+ *
+ * Add two custom methods to the new class:
+ * 1. "sum" - it should return sum of all elements in the array
+ * 2. "onlyNumbers" - it should return new array that will contain only numbers from the source array
+ *
+ * Create several instances of the new "ExtendedArray" class and test both methods "sum" and "onlyNumbers"
+ */
+
+
+//  Solution
+
+class ExtendedArray extends Array {
+    sum(){
+        return this.reduce((sum, el) => sum + el)
+    }
+
+    onlyNumbers(){
+        return this.filter(el => typeof el === "number")
+    }
+}
+
+
+const newArray_1 = new ExtendedArray(1,2,3,4,5,6,7,8,9)
+
+console.log(newArray_1.sum())
+console.log(newArray_1.onlyNumbers())
+
+
 
 
 
