@@ -257,6 +257,11 @@ class CustomArray extends Array {
         this[this.length] = newElement
         return `New element ${newElement} was just added to the array`
     }
+
+    customPop(){
+        this.length = this.length - 1
+        return this
+    }
 }
 
 const newArray_2 = new CustomArray()
