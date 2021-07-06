@@ -264,7 +264,7 @@ class CustomArray extends Array {
     }
 }
 
-const newArray_2 = new CustomArray()
+const newArray_2 = new CustomArray(9,6,3,5)
 
 
 newArray_2.customPush(1)
